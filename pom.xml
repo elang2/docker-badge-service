@@ -34,6 +34,7 @@
             <maven.javadoc.plugin>2.10.3</maven.javadoc.plugin>
             <metrics.version>3.1.0</metrics.version>
             <jersey.spring.version>2.25.1</jersey.spring.version>
+            <push.image>false</push.image>
     </properties>
 
     <dependencies>
@@ -380,6 +381,7 @@
                                 <imageTag>${project.version}</imageTag>
                             </imageTags>
                             <dockerDirectory>${project.build.directory}/docker</dockerDirectory>
+                            <pushImage>${push.image}</pushImage>
                         </configuration>
                     </plugin>
                 </plugins>
