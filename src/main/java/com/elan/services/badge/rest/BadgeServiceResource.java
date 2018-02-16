@@ -51,6 +51,7 @@ public class BadgeServiceResource {
 	public void getBadgesForUser(
 								 @PathParam(BadgeServiceConstants.USER_ID) long userId,
 								 @Suspended AsyncResponse asyncResponse) {
+		System.out.println("Sample Log");
 		asyncResponse.resume(Response.ok().entity("{  \"matches\": 1 }").build());
 	}
 	
