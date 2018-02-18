@@ -238,7 +238,7 @@
             </dependencies>
             <properties>
                 <!-- Name of Docker image that will be built. -->
-                <docker.image.name>badge-service</docker.image.name>
+                <docker.image.name>${project.artifactId}</docker.image.name>
                 <!--
                     Directory that holds Docker file and static content
                     necessary to build the Docker image.
