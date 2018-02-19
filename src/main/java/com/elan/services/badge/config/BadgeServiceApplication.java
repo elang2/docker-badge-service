@@ -17,15 +17,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 import com.ryantenney.metrics.spring.config.annotation.EnableMetrics;
 
 @SpringBootApplication
 @EnableMetrics
-@ComponentScan(basePackages={"com.eharmony.services.singles.badge"})
+@ComponentScan(basePackages={"com.elan.services.badge"})
 @EnableAutoConfiguration(exclude = {ErrorMvcAutoConfiguration.class})
 public class BadgeServiceApplication extends SpringBootServletInitializer {
 	
@@ -38,10 +36,5 @@ public class BadgeServiceApplication extends SpringBootServletInitializer {
         new BadgeServiceApplication()
             .configure(new SpringApplicationBuilder(BadgeServiceApplication.class)).run(args);
     }
-    
-    @Bean
-	public StringRedisSerializer getStringRedisSerializer() {
-		return new StringRedisSerializer();
-	}
     
 }

@@ -25,7 +25,7 @@ import org.springframework.context.annotation.Configuration;
 public class JerseyConfig extends ResourceConfig {
 
     public JerseyConfig() {
-        PackageNamesScanner resourceFinder = new PackageNamesScanner(new String[] { "com.eharmony.services.singles.badge.rest"}, true);
+        PackageNamesScanner resourceFinder = new PackageNamesScanner(new String[] { "com.elan.services.badge.rest"}, true);
 		registerFinder(resourceFinder);
         register(JacksonFeature.class);
     }
